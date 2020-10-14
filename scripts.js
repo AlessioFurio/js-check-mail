@@ -10,6 +10,8 @@
 var array_mail = ['pippodisney@gmail.com', 'plutodisney@gmail.com', 'topolinodisney@gmail.com', 'paperinodisney@gmail.com', 'minniedisney@gmail.com'];
 console.log('Il tuo array contiene: ' + array_mail.length + ' elementi');
 
+var isFound = false;
+
 // chiedere indirizzo mail all' utente
 var mail_utente = prompt('Qual\'è il tuo indirizzo mail?');
 console.log('Il tuo indirizzo mail è: ' + mail_utente);
@@ -18,10 +20,15 @@ console.log('Il tuo indirizzo mail è: ' + mail_utente);
 
 for (var i = 0; i < array_mail.length; i++) {
     if (mail_utente == array_mail[i]) {
-        console.log('sei in lista');
-    }
-    else {
-        console.log('non sei in lista');
-    }
 
+        //dichiarazione variabile booleana x memorizzare che la mail è stata trovata
+        var isFound = true;
+    }
+}
+
+if (isFound == true){
+    console.log('trovata');
+}
+else {
+    console.log('non trovata');
 }
